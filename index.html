@@ -10,8 +10,7 @@
 <body>
 
     <div id="score"></div>
-    <audio id="musica" src="/resource/theme.mp3" muted></audio>
-    <button onclick="musica.muted = false" id="botao-som"><img src="/resource/vol.jpg" alt="Ativar som"></button>
+    <button onclick="musica.play()" id="botao-som"><img src="/resource/vol.jpg"></button>
     <canvas id="tetris" width="240" height="400"></canvas>
 
     <div class="controls">
