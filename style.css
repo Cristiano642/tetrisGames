@@ -18,6 +18,10 @@ canvas{
     height: 90vh;
 }
 
+#botao-som img {
+    width: 25px;
+    height: 25px;
+  }
 
 .controls {
     display: none;
