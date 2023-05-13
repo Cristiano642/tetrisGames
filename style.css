@@ -1,5 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Vina Sans', sans-serif;
+}
+
 body{
-    background: black;
+    background: url(/resource/background.jpg);
     color:white;
     font-family: sans-serif;
     font-size: 2em;
@@ -9,4 +16,32 @@ body{
 canvas{
     border: solid 0.2em white;
     height: 90vh;
+}
+
+.controls {
+    display: none;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 800px) {
+    .wrapper {
+        width: 90vmin;
+        height: 115vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+
+    .controls {
+        display: flex;
+        background-color: black;
+        justify-content: space-between;
+    }
+
+    .controls i {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
 }
