@@ -18,26 +18,34 @@ canvas{
     height: 90vh;
 }
 
+
 .controls {
     display: none;
     justify-content: space-between;
 }
 
-@media screen and (max-width: 800px) {
-    .wrapper {
-        width: 90vmin;
-        height: 115vmin;
-    }
+.controls i {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #b8c6dc;
+    width: calc(100% / 4);
+    cursor: pointer;
+    border-right: 1px solid #171b26;
+}
 
-    .game-details {
-        font-size: 1rem;
-        padding: 15px 27px;
+@media screen and (max-width: 800px) {
+     
+    #tetris {
+        width: 90vmin;
+        height: 150vmin;
     }
 
     .controls {
         display: flex;
         background-color: black;
         justify-content: space-between;
+        justify-items: center;
     }
 
     .controls i {
