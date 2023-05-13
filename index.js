@@ -4,7 +4,7 @@ const controls = document.querySelectorAll(".controls i");
 context.scale(20, 20);
 
 document.addEventListener('DOMContentLoaded', function () {
-    var musica = new Audio('/resource/TetrisTheme.mp3'); // cria o objeto Audio
+    var musica = new Audio('resource/TetrisTheme.mp3'); // cria o objeto Audio
     musica.loop = true; // define a propriedade loop como verdadeira
     musica.play(); // inicia a reprodução da música
 });
