@@ -15,7 +15,10 @@
 
     <div id="score">Score : </div>
     
-    <button onclick="musica.play()" id="botao-som"><img src="/resource/vol.jpg"></button>
+    //<button onclick="musica.play()" id="botao-som"><img src="/resource/vol.jpg"></button>
+
+    <audio id="musica" src="/resource/theme.mp3" crossOrigin="anonymous"></audio>
+    <button onclick="togglePlay()" id="botao-som"><img src="/resource/vol.jpg"></button>
 
     <canvas id="tetris" width="240" height="400"></canvas>
 
