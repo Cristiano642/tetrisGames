@@ -1,14 +1,13 @@
+// Seleciona o canvas e define o contexto para 2D
 const canvas = document.getElementById('tetris');
 const context = canvas.getContext('2d');
+// Seleciona os botões de controle
 const controls = document.querySelectorAll(".controls i");
+
+// Seleciona o canvas e define o contexto para 2D
 context.scale(20, 20);
 
-
-var musica = new Audio('resource/TetrisTheme.mp3'); // cria o objeto Audio
-musica.loop = true; // define a propriedade loop como verdadeira
-musica.play(); // inicia a reprodução da música
-
-
+// Função que varre a arena e remove as linhas completamente preenchidas
 function arenaSweep() {
     let rowCount = 1;
     outer: for (let y = arena.length - 1; y > 0; --y) {
@@ -17,19 +16,21 @@ function arenaSweep() {
                 continue outer;
             }
         }
-
+        // Se a linha estiver completamente preenchida, remove-a e adiciona uma nova linha vazia na parte superior
         const row = arena.splice(y, 1)[0].fill(0);
         arena.unshift(row);
         ++y;
-
+        // Atualiza a pontuação do jogador
         player.score += rowCount * 10;
         rowCount *= 2;
     }
 }
 
+// Verifica se há colisões entre o jogador e a arena
 function collide(arena, player) {
     const m = player.matrix;
     const o = player.pos;
+        // Verifica se alguma célula da matriz do jogador está ocupada pela arena
     for (let y = 0; y < m.length; ++y) {
         for (let x = 0; x < m[y].length; ++x) {
             if (m[y][x] !== 0 &&
@@ -41,7 +42,7 @@ function collide(arena, player) {
     }
     return false;
 }
-
+// Cria uma matriz com as dimensões especificadas
 function createMatrix(w, h) {
     const matrix = [];
     while (h--) {
@@ -49,7 +50,7 @@ function createMatrix(w, h) {
     }
     return matrix;
 }
-
+// Cria uma peça com o tipo especificado
 function createPiece(type) {
     if (type === 'I') {
         return [
@@ -95,7 +96,7 @@ function createPiece(type) {
         ];
     }
 }
-
+// Desenha uma matriz na tela usando um deslocamento
 function drawMatrix(matrix, offset) {
     matrix.forEach((row, y) => {
         row.forEach((value, x) => {
@@ -108,7 +109,7 @@ function drawMatrix(matrix, offset) {
         });
     });
 }
-
+ // Limpa o canvas e desenha a arena e a peça atual
 function draw() {
     context.fillStyle = 'rgba(0,0,0,1)';
     context.fillRect(0, 0, canvas.width, canvas.height);
@@ -146,7 +147,7 @@ function rotate(matrix, dir) {
         matrix.reverse();
     }
 }
-
+ // Move a peça atual para baixo e une-a na arena se colidir
 function playerDrop() {
     player.pos.y++;
     if (collide(arena, player)) {
@@ -165,7 +166,7 @@ function playerMove(offset) {
         player.pos.x -= offset;
     }
 }
-
+   // Reseta a posição da peça atual e seleciona uma nova aleatoriamente
 function playerReset() {
     const pieces = 'TJLOSZI';
     player.matrix = createPiece(pieces[pieces.length * Math.random() | 0]);
@@ -213,6 +214,8 @@ function update(time = 0) {
 }
 
 function updateScore() {
+    let highScore = localStorage.getItem("high-score") || 0;
+    document.getElementById('high-score').innerText = `High Score: ${highScore}`;
     document.getElementById('score').innerText = `Score: ${player.score}`;
 }
 
@@ -266,6 +269,17 @@ const player = {
     matrix: null,
     score: 0,
 };
+
+var musica = document.getElementById("musica");
+musica.loop = true;
+function togglePlay() {
+    if (musica.paused) {
+        musica.play();
+    } else {
+        musica.pause();
+    }
+}
+
 
 playerReset();
 updateScore();
