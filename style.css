@@ -10,8 +10,6 @@ body {
     height: 100%;
     width: 100%;
     background-image: url(/resource/background.jpg);
-    background-size: cover;
-    background-attachment: fixed;
     color: white;
     font-family: sans-serif;
     font-size: 2em;
