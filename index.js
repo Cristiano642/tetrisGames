@@ -270,15 +270,9 @@ const player = {
     score: 0,
 };
 
-var musica = document.getElementById("musica");
-musica.loop = true;
-function togglePlay() {
-    if (musica.paused) {
-        musica.play();
-    } else {
-        musica.pause();
-    }
-}
+var musica = new Audio('/resource/theme.mp3'); // cria o objeto Audio
+musica.loop = true; // define a propriedade loop como verdadeira
+musica.play(); // inicia a reprodução da música
 
 
 playerReset();
