@@ -60,6 +60,11 @@ footer {
         height: 130vmin;
     }
 
+    body{
+        background-image: url(/resource/background-mobile.png);
+        background-size: cover;
+    }
+
     .controls {
         display: flex;
         background-color: black;
