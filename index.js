@@ -214,8 +214,6 @@ function update(time = 0) {
 }
 
 function updateScore() {
-    let highScore = localStorage.getItem("high-score") || 0;
-    document.getElementById('high-score').innerText = `High Score: ${highScore}`;
     document.getElementById('score').innerText = `Score: ${player.score}`;
 }
 
