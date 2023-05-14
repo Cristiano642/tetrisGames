@@ -1,27 +1,33 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Vina Sans', sans-serif;
 }
 
-body{
-    background: url(/resource/background.jpg);
-    color:white;
+body {
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(/resource/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
     font-family: sans-serif;
     font-size: 2em;
     text-align: center;
 }
 
-canvas{
+
+canvas {
     border: solid 0.2em white;
-    height: 90vh;
+    height: 75vh;
 }
 
 #botao-som img {
     width: 25px;
     height: 25px;
-  }
+}
 
 .controls {
     display: none;
@@ -39,19 +45,18 @@ canvas{
 }
 
 footer {
-    bottom: 0;
     width: 100%;
     text-align: center;
-    color:  black;
+    color: white;
     font-weight: bold;
     background: rgba(2, 2, 2, 0.6);
 }
 
 @media screen and (max-width: 800px) {
-     
+
     #tetris {
-        width: 90vmin;
-        height: 150vmin;
+        width: 95vmin;
+        height: 130vmin;
     }
 
     .controls {
@@ -63,6 +68,7 @@ footer {
 
     .controls i {
         padding: 15px 0;
-        font-size: 1rem;
+        font-size: 32px;
+        font-weight: bold;
     }
 }
