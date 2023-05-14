@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/resource/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/resource/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/resource/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="style.css">
     <title>Tetris Game:: Developed by Cristiano Esteves</title>
 </head>
+
 <body>
 
-    <div id="score"></div>
-    <button onclick="musica.play()" id="botao-som"><img src="/resource/vol.jpg"></button>
+    <div id="high-score">High Score : </div>
+    <div id="score">Score : </div>
+    <audio id="musica" src="/resource/theme.mp3"></audio>
+    <button onclick="togglePlay()" id="botao-som"><img src="/resource/vol.jpg"></button>
+
     <canvas id="tetris" width="240" height="400"></canvas>
 
     <div class="controls">
-        <i data-key="ArrowUp">⇧</i>
-        <i data-key="ArrowDown">⇩</i>
-        <i data-key="ArrowLeft">⇦</i>
-        <i data-key="ArrowRight">⇨</i>
+        <i data-key="ArrowUp">↻</i>
+        <i data-key="ArrowDown">↓</i>
+        <i data-key="ArrowLeft">←</i>
+        <i data-key="ArrowRight">→</i>
     </div>
-
-
+    <footer>
+        <p>Developed by </p>
+        <p>Cristiano Esteves</p>
+        <p>You can contact me on my social networks:</p>
+        <a href="https://www.linkedin.com/in/cristianoe-dev/"><img src="resource/linkedin-icon.png" alt="Linkedin"></a>
+        <a href="https://github.com/Cristiano642"><img src="resource/GitHub-icon.png" alt="GitHub"></a>
+    </footer>
 
     <script src="index.js"></script>
 </body>
+
 </html>
