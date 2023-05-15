@@ -12,3 +12,6 @@ The game has a sound effect that plays the song "Korobeiniki", Tetris' iconic th
 
 # Demo
 You can try the game here: https://tetris-game-9y6k.onrender.com/
+
+# Source code
+You can see the source code of the game here: https://github.com/Cristiano642/tetrisGames
