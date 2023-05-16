@@ -13,9 +13,6 @@ The game has a sound effect that plays the song "Korobeiniki", Tetris' iconic th
 # Demo
 You can try the game here: https://tetris-game-9y6k.onrender.com/
 
-# Source code
-You can see the source code of the game here: https://github.com/Cristiano642/tetrisGames
-
 # Credits
 This game was inspired by a homework that I had at Academia de Código, where I learned to program in 14 weeks. The homework was about Tetris and was presented by a colleague who made me know the history of the game and its creator, Alexey Pajitnov, who developed Tetris in 1984 in the Soviet Union.
 
