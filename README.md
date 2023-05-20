@@ -20,4 +20,4 @@ You can also contact me by my email: cristiano642@gmail.com
 # Credits
 This game was inspired by a homework that I had at Academia de Código, where I learned to program in 14 weeks. The homework was about Tetris and was presented by a colleague who made me know the history of the game and its creator, Alexey Pajitnov, who developed Tetris in 1984 in the Soviet Union.
 
-I hope you enjoy my game and have fun!
+I hope you enjoy my game and have fun!! 
