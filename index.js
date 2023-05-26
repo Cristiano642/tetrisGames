@@ -116,7 +116,6 @@ function drawMatrix(matrix, offset) {
 function draw() {
     context.fillStyle = 'rgba(0,0,0,1)';
     context.fillRect(0, 0, canvas.width, canvas.height);
-
     drawMatrix(arena, { x: 0, y: 0 });
     drawMatrix(player.matrix, player.pos);
 }
@@ -181,6 +180,7 @@ function playerReset() {
         arena.forEach(row => row.fill(0));
         player.score = 0;
         updateScore();
+        dropInterval = baseDropInterval;
     }
 }
 
