@@ -218,8 +218,25 @@ function update(time = 0) {
     requestAnimationFrame(update);
 }
 
+let highScore = 0;
+
+// Verifica se já existe um highScore salvo no localStorage
+if (localStorage.getItem("highScore")) {
+ highScore = localStorage.getItem("highScore");
+}
+
+// Atualiza a pontuação e o highScore na tela
 function updateScore() {
-    document.getElementById('score').innerText = `Score: ${player.score}`;
+ document.getElementById('score').innerText = `Score: ${player.score}`;
+ document.getElementById('highScore').innerText = `High Score: ${highScore}`;
+}
+
+// Verifica se o jogador bateu o highScore
+function checkHighScore() {
+ if (player.score > highScore) {
+ highScore = player.score;
+ localStorage.setItem("highScore", highScore);
+ }
 }
 
 controls.forEach(button => button.addEventListener("click", () => changeDirection
