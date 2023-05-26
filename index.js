@@ -159,6 +159,7 @@ function playerDrop() {
         playerReset();
         arenaSweep();
         updateScore();
+        checkHighScore();
     }
     dropCounter = 0;
 }
