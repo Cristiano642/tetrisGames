@@ -22,7 +22,10 @@ function arenaSweep() {
         ++y;
         // Atualiza a pontuação do jogador
         player.score += rowCount * 10;
-        rowCount *= 2;
+                clearedLines += rowCount;
+
+        // Aumenta a velocidade de queda após cada linha limpa
+            dropInterval = baseDropInterval / Math.pow(1.2, clearedLines);
     }
 }
 
@@ -195,8 +198,10 @@ function playerRotate(dir) {
     }
 }
 
+const baseDropInterval = 1000;
 let dropCounter = 0;
-let dropInterval = 1000;
+let clearedLines = 0;
+let dropInterval = baseDropInterval;
 
 let lastTime = 0;
 function update(time = 0) {
@@ -268,8 +273,8 @@ const player = {
     score: 0,
 };
 
-var musica = document.getElementById("musica"); // seleciona o elemento audio
-musica.loop = true; // define a propriedade loop como verdadeira
+var musica = document.getElementById("musica");
+musica.loop = true; 
 function togglePlay() {
   if (musica.paused) {
     musica.play();
