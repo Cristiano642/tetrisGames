@@ -25,7 +25,7 @@ function arenaSweep() {
                 clearedLines += rowCount;
 
         // Aumenta a velocidade de queda após cada linha limpa
-            dropInterval = baseDropInterval / Math.pow(1.2, clearedLines);
+            dropInterval = baseDropInterval / Math.pow(1.1, clearedLines);
     }
 }
 
